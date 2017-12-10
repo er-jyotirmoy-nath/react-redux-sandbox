@@ -5,13 +5,13 @@ class Main extends React.Component {
     constructor(props){
     	super(props);
     	this.state = {};
-      console.log(this.props.posts);
+
     }
     render() {
         return (
             <div className="class-name">
-                <Link to="/home">Home</Link> |
-                <Link to="/user">User</Link>
+                <Link to="/posts">Posts</Link> |
+                <Link to="/addpost">Add Posts</Link>
                 <hr/>
                 {React.cloneElement(this.props.children,this.props)}
             </div>
@@ -25,6 +25,6 @@ function mapStateToProps(state) {
   };
 }
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(addComments,dispatch)
+  return bindActionCreators({addComments:addComments},dispatch)
 }
 const App = connect(mapStateToProps, mapDispatchToProps)(Main)

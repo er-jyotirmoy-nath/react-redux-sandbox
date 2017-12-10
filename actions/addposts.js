@@ -1,8 +1,7 @@
 function addComments(title,body,userId){
+  let payload = {title:title,body:body,userId:userId};
   return{
     type:'ADD_POSTS',
-    title,
-    body,
-    userId
+    payload:payload
   };
 }
