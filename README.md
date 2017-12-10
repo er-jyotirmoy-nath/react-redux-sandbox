@@ -1,2 +1,2 @@
-# react-redux-example-app
+# react-redux-sandbox-app
 
